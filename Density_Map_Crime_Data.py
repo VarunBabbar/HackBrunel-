@@ -20,7 +20,7 @@ print(gpy.distance(input_coordinates, (input_latitude, input_longitude + f)).mil
 def crime_location_filter(input_latitude, input_longitude,year_month):
     import requests
     import json
-    url = "https://data.police.uk/api/crimes-street/all-crime?lat={}&lng={}&date={}&poly={},{}:{},{}:{},{}:{},{}".format(input_latitude, input_longitude, year_month, input_latitude - 0.0435, input_longitude - f, input_latitude + 0.0435, input_longitude - f, input_latitude - 0.0145, input_longitude + 0.0119, input_latitude + 0.0145, input_longitude + 0.0119)
+    url = "https://data.police.uk/api/crimes-street/all-crime?lat={}&lng={}&date={}&poly={},{}:{},{}:{},{}:{},{}".format(input_latitude, input_longitude, year_month, input_latitude - 0.0435, input_longitude - f, input_latitude + 0.0435, input_longitude - f, input_latitude - 0.0435, input_longitude + f, input_latitude + 0.0435, input_longitude + f)
     requests = requests.get(url)
     crime_data = requests.json()
     crime_type = []
