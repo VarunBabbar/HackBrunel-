@@ -83,7 +83,7 @@ def density_map_generator():
     unrolled_latitude = y
     unrolled_longitude = x
     unrolled_density = z
-    a = [min(unrolled_longitude), max(unrolled_longitude),min(unrolled_latitude), max(unrolled_latitude)]
+    a = [min(x), max(x),min(y), max(y)]
 
     plt.imshow(grad, extent=a)
     plt.show()
