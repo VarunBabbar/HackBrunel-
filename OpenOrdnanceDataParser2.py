@@ -20,7 +20,7 @@ def location_of_node(node):
     
     a = convertbng.util.convert_lonlat(float(EN[0]), float(EN[1]))
     long_lat = (a[0][0], a[1][0])
-    return long_latgit
+    return long_lat
 
 location_to_node = {location_of_node(road_node) : road_node for road_node in road_nodes}
 
